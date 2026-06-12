@@ -176,6 +176,7 @@ a {
 
 .project {
     display: block;
+    margin-top: 12px;
     padding: 18px;
     border: 1px dashed var(--green);
     border-radius: 8px;

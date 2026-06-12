@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Contact ContactSweep support for help, feedback, and privacy questions."
+    />
+    <title>Support | ContactSweep</title>
+    <link rel="icon" href="logo.jpg" type="image/jpeg" />
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #08111f;
+        --muted: #5e6b7d;
+        --blue: #0a8ff0;
+        --blue-deep: #0661d8;
+        --line: rgba(8, 17, 31, 0.1);
+        --panel: rgba(255, 255, 255, 0.72);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background:
+          linear-gradient(135deg, rgba(238, 248, 255, 0.96), rgba(255, 255, 255, 0.94) 48%, rgba(229, 247, 239, 0.9)),
+          #f8fbff;
+      }
+
+      main {
+        width: min(860px, calc(100% - 36px));
+        margin: 0 auto;
+        padding: 56px 0 72px;
+      }
+
+      header {
+        margin-bottom: 36px;
+      }
+
+      a {
+        color: var(--blue-deep);
+        text-decoration: none;
+        font-weight: 750;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .back-link {
+        display: inline-flex;
+        margin-bottom: 28px;
+      }
+
+      h1 {
+        margin: 0 0 14px;
+        font-size: clamp(2.4rem, 7vw, 4.5rem);
+        line-height: 0.98;
+        letter-spacing: 0;
+      }
+
+      .intro {
+        max-width: 680px;
+        margin: 0;
+        color: var(--muted);
+        font-size: 1.12rem;
+        line-height: 1.7;
+      }
+
+      .support-card {
+        margin: 34px 0;
+        padding: clamp(26px, 6vw, 44px);
+        border: 1px solid rgba(255, 255, 255, 0.76);
+        border-radius: 28px;
+        background: var(--panel);
+        box-shadow: 0 24px 70px rgba(28, 67, 118, 0.16);
+        backdrop-filter: blur(22px);
+      }
+
+      .email-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 54px;
+        margin-top: 18px;
+        padding: 14px 22px;
+        border-radius: 17px;
+        color: #fff;
+        background: linear-gradient(135deg, var(--blue), #22c76f);
+        box-shadow: 0 18px 36px rgba(10, 143, 240, 0.24);
+      }
+
+      .email-button:hover {
+        text-decoration: none;
+      }
+
+      section {
+        padding: 28px 0;
+        border-top: 1px solid var(--line);
+      }
+
+      h2 {
+        margin: 0 0 12px;
+        font-size: 1.35rem;
+        letter-spacing: 0;
+      }
+
+      p,
+      li {
+        color: var(--muted);
+        font-size: 1rem;
+        line-height: 1.75;
+      }
+
+      p {
+        margin: 0 0 14px;
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 22px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <a class="back-link" href="index.html">Back to ContactSweep</a>
+        <h1>Support</h1>
+        <p class="intro">
+          Need help with ContactSweep, have feedback, or want to ask a privacy question? Send a message and we will help as soon as possible.
+        </p>
+      </header>
+
+      <div class="support-card">
+        <h2>Contact Email</h2>
+        <p>
+          For support, bug reports, feature requests, and privacy questions, email:
+        </p>
+        <a class="email-button" href="mailto:contact@99haqh.com">contact@99haqh.com</a>
+      </div>
+
+      <section>
+        <h2>What to Include</h2>
+        <p>To help us understand your request faster, please include:</p>
+        <ul>
+          <li>A short description of the issue or question</li>
+          <li>Your device model and iOS version, if relevant</li>
+          <li>The ContactSweep app version, if available</li>
+          <li>Steps to reproduce the issue, if you are reporting a bug</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Privacy Questions</h2>
+        <p>
+          ContactSweep only accesses your contacts to find duplicate contacts and does not store or send your contact list anywhere. For more details, please read the
+          <a href="Privacy-Policy.html">Privacy Policy</a>.
+        </p>
+      </section>
+
+      <section>
+        <h2>Response Time</h2>
+        <p>
+          We aim to respond to support messages as soon as possible. Response times may vary depending on message volume and the detail needed to investigate your request.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

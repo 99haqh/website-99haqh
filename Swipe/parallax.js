@@ -1,74 +1,71 @@
 (function () {
-    var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-
-    if (reduceMotion.matches) {
-        return;
-    }
-
+    var prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     var root = document.documentElement;
-    var scene = document.querySelector("[data-parallax-scene]");
-    var gallery = document.querySelector("[data-parallax-gallery]");
-    var parallaxItems = Array.prototype.slice.call(document.querySelectorAll("[data-parallax]"));
-    var galleryItems = gallery ? Array.prototype.slice.call(gallery.querySelectorAll("[data-depth]")) : [];
-    var pointerX = 0;
-    var pointerY = 0;
+    var hero = document.querySelector("[data-parallax-scene]");
+    var preview = document.querySelector("[data-preview-parallax]");
+    var revealItems = Array.prototype.slice.call(document.querySelectorAll(".reveal"));
+    var previewItems = preview ? Array.prototype.slice.call(preview.querySelectorAll("[data-depth]")) : [];
     var ticking = false;
 
-    parallaxItems.forEach(function (item) {
-        item.style.setProperty("--depth", item.getAttribute("data-parallax"));
-    });
-
-    galleryItems.forEach(function (item) {
-        item.style.setProperty("--gallery-depth", item.getAttribute("data-depth"));
+    previewItems.forEach(function (item) {
+        item.style.setProperty("--depth", item.getAttribute("data-depth"));
     });
 
     function clamp(value, min, max) {
         return Math.max(min, Math.min(max, value));
     }
 
-    function update() {
+    function updateParallax() {
         ticking = false;
 
-        if (scene) {
-            var sceneRect = scene.getBoundingClientRect();
-            var sceneProgress = clamp(-sceneRect.top / Math.max(sceneRect.height, 1), -0.2, 1.2);
-            root.style.setProperty("--scroll-y", (sceneProgress * 72).toFixed(2) + "px");
+        if (prefersReducedMotion) {
+            return;
         }
 
-        root.style.setProperty("--mouse-x", pointerX.toFixed(2) + "px");
-        root.style.setProperty("--mouse-y", pointerY.toFixed(2) + "px");
+        if (hero) {
+            var heroRect = hero.getBoundingClientRect();
+            var heroProgress = clamp(-heroRect.top / Math.max(heroRect.height, 1), -0.2, 1.25);
+            root.style.setProperty("--hero-shift", (heroProgress * 120).toFixed(2) + "px");
+        }
 
-        if (gallery) {
-            var galleryRect = gallery.getBoundingClientRect();
-            var windowHeight = window.innerHeight || 1;
-            var galleryProgress = clamp((windowHeight - galleryRect.top) / (windowHeight + galleryRect.height), 0, 1);
-            gallery.style.setProperty("--gallery-y", ((galleryProgress - 0.5) * 80).toFixed(2) + "px");
+        if (preview) {
+            var previewRect = preview.getBoundingClientRect();
+            var viewportHeight = window.innerHeight || 1;
+            var previewProgress = clamp((viewportHeight - previewRect.top) / (viewportHeight + previewRect.height), 0, 1);
+            root.style.setProperty("--preview-shift", ((previewProgress - 0.5) * 130).toFixed(2) + "px");
         }
     }
 
-    function requestUpdate() {
+    function requestParallaxUpdate() {
         if (!ticking) {
             ticking = true;
-            window.requestAnimationFrame(update);
+            window.requestAnimationFrame(updateParallax);
         }
     }
 
-    window.addEventListener("scroll", requestUpdate, { passive: true });
-    window.addEventListener("resize", requestUpdate);
+    if ("IntersectionObserver" in window) {
+        var revealObserver = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("is-visible");
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.18,
+            rootMargin: "0px 0px -8% 0px"
+        });
 
-    window.addEventListener("pointermove", function (event) {
-        var width = window.innerWidth || 1;
-        var height = window.innerHeight || 1;
-        pointerX = clamp((event.clientX / width - 0.5) * 42, -24, 24);
-        pointerY = clamp((event.clientY / height - 0.5) * 34, -20, 20);
-        requestUpdate();
-    }, { passive: true });
+        revealItems.forEach(function (item) {
+            revealObserver.observe(item);
+        });
+    } else {
+        revealItems.forEach(function (item) {
+            item.classList.add("is-visible");
+        });
+    }
 
-    window.addEventListener("pointerleave", function () {
-        pointerX = 0;
-        pointerY = 0;
-        requestUpdate();
-    });
-
-    requestUpdate();
+    window.addEventListener("scroll", requestParallaxUpdate, { passive: true });
+    window.addEventListener("resize", requestParallaxUpdate);
+    requestParallaxUpdate();
 })();

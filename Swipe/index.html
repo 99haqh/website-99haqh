@@ -3,176 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sWipe - Fast Photo Cleanup</title>
+    <meta name="description" content="sWipe helps you clean up your photo library with fast, simple swipe decisions.">
+    <title>sWipe - Clean your camera roll faster</title>
+    <script>document.documentElement.classList.add("js");</script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header class="site-header">
-        <a class="brand" href="index.html">sWipe</a>
-        <nav class="nav-links" aria-label="sWipe links">
-            <a class="home-link nav-download" href="https://apps.apple.com/app/swipe-a-free-photos-cleaner/id6777624437" target="_blank" rel="noopener">App Store</a>
-            <a class="home-link" href="support.html">Support</a>
-            <a class="home-link" href="Privacy-Policy.html">Privacy Policy</a>
-            <a class="home-link" href="../index.html">99haqh</a>
+        <!-- Replace app name here if the product name changes. -->
+        <a class="brand" href="index.html" aria-label="sWipe home">sWipe</a>
+        <nav class="nav-links" aria-label="Primary navigation">
+            <!-- Replace this App Store URL with your final live listing if it changes. -->
+            <a href="https://apps.apple.com/app/swipe-a-free-photos-cleaner/id6777624437" target="_blank" rel="noopener">Download</a>
+            <a href="#features">Features</a>
+            <a href="#how-it-works">How it works</a>
+            <a href="support.html">Support</a>
         </nav>
     </header>
 
     <main>
         <section class="hero" data-parallax-scene>
-            <div class="parallax-layer layer-grid" aria-hidden="true"></div>
-            <div class="parallax-layer layer-orbit layer-orbit-one" aria-hidden="true"></div>
-            <div class="parallax-layer layer-orbit layer-orbit-two" aria-hidden="true"></div>
-            <div class="hero-copy-panel" data-parallax="0.06">
-                <p class="eyebrow">Photo cleanup, made fast</p>
-                <h1>sWipe</h1>
-                <p class="hero-copy">
-                    Review your photo library with simple left-or-right decisions. Mark the clutter now, keep the good shots moving, and delete only when you are ready.
+            <div class="hero-bg" aria-hidden="true"></div>
+            <div class="hero-shell">
+                <div class="hero-copy reveal">
+                    <p class="eyebrow">Photo cleanup, made beautifully simple</p>
+                    <h1>Swipe through clutter. Keep what matters.</h1>
+                    <p class="hero-subtitle">
+                        sWipe turns camera roll cleanup into quick, confident decisions, so your best memories stay easy to find.
+                    </p>
+                    <div class="hero-actions">
+                        <!-- Replace this App Store URL with your production download link. -->
+                        <a class="store-badge" href="https://apps.apple.com/app/swipe-a-free-photos-cleaner/id6777624437" target="_blank" rel="noopener" aria-label="Download sWipe on the App Store">
+                            <img src="app-store-badge.svg" alt="Download on the App Store">
+                        </a>
+                        <a class="secondary-link" href="#preview">See preview</a>
+                    </div>
+                </div>
+
+                <div class="hero-visual reveal" data-parallax="0.16">
+                    <div class="phone-stack" aria-label="sWipe app screenshots">
+                        <!-- Replace image2.jpg and image4.jpg with your preferred hero screenshots. -->
+                        <img class="phone phone-back" src="image4.jpg" alt="sWipe keep photo screen">
+                        <img class="phone phone-front" src="image2.jpg" alt="sWipe photo cleanup review screen">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="trust-strip" aria-label="sWipe highlights">
+            <div>
+                <strong>Fast swipes</strong>
+                <span>Left to remove, right to keep.</span>
+            </div>
+            <div>
+                <strong>Final review</strong>
+                <span>Confirm before anything is deleted.</span>
+            </div>
+            <div>
+                <strong>Built for iPhone</strong>
+                <span>A clean flow that feels native.</span>
+            </div>
+        </section>
+
+        <section class="section features-section" id="features">
+            <div class="section-intro reveal">
+                <p class="eyebrow">Features</p>
+                <h2>Everything you need to tidy your photo library without overthinking it.</h2>
+            </div>
+            <div class="feature-grid">
+                <article class="glass-card feature-card reveal">
+                    <span class="feature-icon" aria-hidden="true">*</span>
+                    <h3>Swipe decisions</h3>
+                    <p>Move through your library with simple left and right gestures that keep cleanup light and focused.</p>
+                </article>
+                <article class="glass-card feature-card reveal">
+                    <span class="feature-icon" aria-hidden="true">~</span>
+                    <h3>Similar photo review</h3>
+                    <p>Compare nearby shots and duplicates faster, then keep the version that actually deserves space.</p>
+                </article>
+                <article class="glass-card feature-card reveal">
+                    <span class="feature-icon" aria-hidden="true">OK</span>
+                    <h3>Confirm before delete</h3>
+                    <p>Marked photos wait for your final approval, giving every cleanup session a calm checkpoint.</p>
+                </article>
+                <article class="glass-card feature-card reveal">
+                    <span class="feature-icon" aria-hidden="true">R</span>
+                    <h3>Resume anytime</h3>
+                    <p>Pause a review and return later without losing your place or restarting the whole flow.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section steps-section" id="how-it-works">
+            <div class="section-intro reveal">
+                <p class="eyebrow">How it works</p>
+                <h2>Clean up in minutes, one satisfying choice at a time.</h2>
+            </div>
+            <div class="steps">
+                <article class="step reveal">
+                    <span>01</span>
+                    <h3>Choose a mode</h3>
+                    <p>Start with the full library or focus on similar photos that are easiest to clear.</p>
+                </article>
+                <article class="step reveal">
+                    <span>02</span>
+                    <h3>Swipe quickly</h3>
+                    <p>Keep the good shots, mark the clutter, and undo when you change your mind.</p>
+                </article>
+                <article class="step reveal">
+                    <span>03</span>
+                    <h3>Review the queue</h3>
+                    <p>See everything marked for deletion before it leaves your library.</p>
+                </article>
+                <article class="step reveal">
+                    <span>04</span>
+                    <h3>Enjoy the space</h3>
+                    <p>Finish with a cleaner camera roll and less visual noise every time you open Photos.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section preview-section" id="preview">
+            <div class="preview-copy reveal">
+                <p class="eyebrow">App preview</p>
+                <h2>A focused iPhone experience for clearing the small messes that pile up.</h2>
+                <p>
+                    Big controls, readable photo previews, and a final confirmation step make sWipe feel fast without feeling risky.
                 </p>
-                <p class="free-note">
-                    Totally free. No paywall, no hidden fees, and no catch.
-                </p>
-                <div class="hero-metrics" aria-label="sWipe quick facts">
-                    <span>Full library review</span>
-                    <span>Duplicate cleanup</span>
-                    <span>Local-first flow</span>
-                </div>
-                <div class="hero-actions">
-                    <a class="app-store-badge" href="https://apps.apple.com/app/swipe-a-free-photos-cleaner/id6777624437" target="_blank" rel="noopener" aria-label="Download sWipe on the App Store">
-                        <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store">
-                    </a>
-                    <a class="text-link" href="#screens">View screenshots</a>
-                </div>
             </div>
-            <div class="hero-visual" data-parallax="0.16" aria-label="sWipe app preview">
-                <img class="phone-shot" src="image2.jpg" alt="sWipe swipe review screen showing delete, back, and keep controls">
+            <div class="preview-visual reveal" data-preview-parallax>
+                <!-- Replace these screenshots with updated product images whenever the app UI changes. -->
+                <img class="phone preview-phone preview-left" data-depth="-0.08" src="image3.jpg" alt="sWipe swipe left screenshot">
+                <img class="phone preview-phone preview-main" data-depth="0.12" src="image1.jpg" alt="sWipe app overview screenshot">
+                <img class="phone preview-phone preview-right" data-depth="0.06" src="image5.jpg" alt="sWipe delete confirmation screenshot">
             </div>
         </section>
 
-        <section class="stats-strip" aria-label="sWipe highlights">
-            <div class="stat">
-                <strong>Left</strong>
-                <span>mark photos to delete</span>
+        <section class="cta-section reveal">
+            <div class="cta-content">
+                <p class="eyebrow">Ready when your camera roll is not</p>
+                <h2>Make photo cleanup feel effortless.</h2>
+                <p>Download sWipe and turn a messy library into a few quick swipes.</p>
+                <!-- Replace this App Store URL with your production download link. -->
+                <a class="store-badge" href="https://apps.apple.com/app/swipe-a-free-photos-cleaner/id6777624437" target="_blank" rel="noopener" aria-label="Download sWipe on the App Store">
+                    <img src="app-store-badge.svg" alt="Download on the App Store">
+                </a>
             </div>
-            <div class="stat">
-                <strong>Right</strong>
-                <span>keep what matters</span>
-            </div>
-            <div class="stat">
-                <strong>Free</strong>
-                <span>no paywalls</span>
-            </div>
-        </section>
-
-        <section class="section" id="features">
-            <h2 class="section-heading">Built for clearing a messy library without losing your place.</h2>
-            <div class="features">
-                <article class="feature">
-                    <span class="feature-mark" aria-hidden="true">
-                        <svg viewBox="0 0 24 24">
-                            <rect x="4" y="5" width="16" height="14" rx="2"></rect>
-                            <path d="M8 9h8"></path>
-                            <path d="M8 13h5"></path>
-                            <path d="M15 15l2 2 3-4"></path>
-                        </svg>
-                    </span>
-                    <h2>Full-library review</h2>
-                    <p>Move through your photo library one decision at a time: swipe left to delete, swipe right to keep.</p>
-                </article>
-                <article class="feature">
-                    <span class="feature-mark" aria-hidden="true">
-                        <svg viewBox="0 0 24 24">
-                            <rect x="4" y="7" width="10" height="10" rx="2"></rect>
-                            <rect x="10" y="5" width="10" height="10" rx="2"></rect>
-                            <path d="M7 20h10"></path>
-                        </svg>
-                    </span>
-                    <h2>Similar cleanup</h2>
-                    <p>Find nearby duplicate and similar shots that were taken close together, then choose the best one.</p>
-                </article>
-                <article class="feature">
-                    <span class="feature-mark" aria-hidden="true">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M5 7h14"></path>
-                            <path d="M10 11v6"></path>
-                            <path d="M14 11v6"></path>
-                            <path d="M8 7l1 12h6l1-12"></path>
-                            <path d="M9 7V4h6v3"></path>
-                        </svg>
-                    </span>
-                    <h2>Mark now, delete later</h2>
-                    <p>Photos stay in a marked queue until you confirm deletion, so cleanup never has to feel reckless.</p>
-                </article>
-                <article class="feature">
-                    <span class="feature-mark" aria-hidden="true">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M20 12a8 8 0 1 1-2.3-5.7"></path>
-                            <path d="M20 4v6h-6"></path>
-                            <path d="M9 12l2 2 4-5"></path>
-                        </svg>
-                    </span>
-                    <h2>Persistent progress</h2>
-                    <p>Your review state carries across launches, letting you pause and resume the cleanup whenever you want.</p>
-                </article>
-            </div>
-        </section>
-
-        <section class="section showcase" id="screens">
-            <h2 class="section-heading">Fast decisions, clear checkpoints, simple setup.</h2>
-            <div class="gallery" data-parallax-gallery>
-                <img data-depth="0.05" src="image1.jpg" alt="sWipe overview showing swipe review, nearby duplicates, and review before delete">
-                <img data-depth="0.12" src="image3.jpg" alt="sWipe screenshot showing swipe left to delete">
-                <img data-depth="0.08" src="image4.jpg" alt="sWipe screenshot showing swipe right to keep">
-                <img data-depth="0.16" src="image5.jpg" alt="sWipe confirmation screen before deleting marked photos">
-                <img data-depth="0.10" src="image6.jpg" alt="sWipe cleanup mode setup screen">
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="workflow">
-                <div>
-                    <h2 class="section-heading">A review flow that respects second thoughts.</h2>
-                    <ul class="workflow-list">
-                        <li>
-                            <span class="step-number">1</span>
-                            <div>
-                                <h2>Choose a cleanup mode</h2>
-                                <p>Review everything or focus on nearby duplicates and similar photos.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="step-number">2</span>
-                            <div>
-                                <h2>Swipe through photos</h2>
-                                <p>Use fast gestures or large buttons for delete, back, and keep decisions.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="step-number">3</span>
-                            <div>
-                                <h2>Confirm once</h2>
-                                <p>Marked photos wait in one place until you are ready to delete them from your library.</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <img class="phone-shot" src="image5.jpg" alt="sWipe marked photo deletion confirmation">
-            </div>
-        </section>
-
-        <section class="closing">
-            <h2>Clean up the camera roll in short, satisfying sessions.</h2>
-            <p>sWipe keeps the review moving while giving every deletion a final checkpoint.</p>
         </section>
     </main>
 
     <footer class="site-footer">
-        <span>sWipe</span>
-        <nav class="nav-links" aria-label="sWipe footer links">
-            <a href="https://apps.apple.com/app/swipe-a-free-photos-cleaner/id6777624437" target="_blank" rel="noopener">App Store</a>
-            <a href="support.html">Support</a>
+        <div>
+            <!-- Replace app name here if needed. -->
+            <strong>sWipe</strong>
+            <span>Clean your camera roll faster.</span>
+        </div>
+        <nav class="footer-links" aria-label="Footer navigation">
+            <!-- Replace privacy/support paths and contact destination if these pages move. -->
             <a href="Privacy-Policy.html">Privacy Policy</a>
+            <a href="support.html">Support</a>
+            <a href="mailto:support@99haqh.com">Contact</a>
+            <a href="../index.html">99haqh</a>
         </nav>
     </footer>
+
     <script src="parallax.js"></script>
 </body>
 </html>

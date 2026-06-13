@@ -36,6 +36,28 @@ body {
     text-decoration: none;
 }
 
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 42px;
+}
+
+.brand img,
+.footer-brand img {
+    display: block;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    box-shadow: 0 10px 24px rgba(21, 31, 50, 0.14);
+}
+
+.brand span,
+.footer-brand span {
+    display: inline-flex;
+    align-items: center;
+}
+
 .home-link {
     color: var(--muted);
     font-size: 14px;
@@ -147,6 +169,18 @@ a {
 
 .site-footer a {
     text-decoration: none;
+}
+
+.footer-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-brand img {
+    width: 34px;
+    height: 34px;
+    border-radius: 9px;
 }
 
 @media (max-width: 640px) {

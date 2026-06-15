@@ -5,19 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Contact ContactSweep support for help, feedback, and privacy questions."
+      content="Contact PDF Toolbox support for help, feedback, bug reports, and privacy questions."
     />
-    <title>Support | ContactSweep</title>
-    <link rel="icon" href="assets/logo.jpg" type="image/jpeg" />
+    <title>Support | PDF Toolbox</title>
+    <link rel="icon" href="assets/pdf_logo_light.png" type="image/png" />
     <style>
       :root {
         color-scheme: light;
-        --ink: #08111f;
-        --muted: #5e6b7d;
-        --blue: #0a8ff0;
-        --blue-deep: #0661d8;
-        --line: rgba(8, 17, 31, 0.1);
-        --panel: rgba(255, 255, 255, 0.72);
+        --ink: #11131a;
+        --muted: #687080;
+        --coral: #ef4f3f;
+        --coral-deep: #d9382f;
+        --aqua: #2aa7b8;
+        --line: rgba(17, 19, 26, 0.1);
+        --panel: rgba(255, 255, 255, 0.74);
         font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
       }
 
@@ -29,8 +30,9 @@
         margin: 0;
         color: var(--ink);
         background:
-          linear-gradient(135deg, rgba(238, 248, 255, 0.96), rgba(255, 255, 255, 0.94) 48%, rgba(229, 247, 239, 0.9)),
-          #f8fbff;
+          radial-gradient(circle at 16% 8%, rgba(42, 167, 184, 0.14), transparent 28%),
+          radial-gradient(circle at 84% 14%, rgba(239, 79, 63, 0.13), transparent 30%),
+          linear-gradient(180deg, #ffffff 0%, #fbfcf7 48%, #f5f8fb 100%);
       }
 
       main {
@@ -44,7 +46,7 @@
       }
 
       a {
-        color: var(--blue-deep);
+        color: var(--coral-deep);
         text-decoration: none;
         font-weight: 750;
       }
@@ -66,7 +68,7 @@
       }
 
       .intro {
-        max-width: 680px;
+        max-width: 700px;
         margin: 0;
         color: var(--muted);
         font-size: 1.12rem;
@@ -76,10 +78,10 @@
       .support-card {
         margin: 34px 0;
         padding: clamp(26px, 6vw, 44px);
-        border: 1px solid rgba(255, 255, 255, 0.76);
+        border: 1px solid rgba(255, 255, 255, 0.78);
         border-radius: 28px;
         background: var(--panel);
-        box-shadow: 0 24px 70px rgba(28, 67, 118, 0.16);
+        box-shadow: 0 24px 70px rgba(38, 55, 84, 0.16);
         backdrop-filter: blur(22px);
       }
 
@@ -92,8 +94,8 @@
         padding: 14px 22px;
         border-radius: 17px;
         color: #fff;
-        background: linear-gradient(135deg, var(--blue), #22c76f);
-        box-shadow: 0 18px 36px rgba(10, 143, 240, 0.24);
+        background: linear-gradient(135deg, var(--coral), var(--aqua));
+        box-shadow: 0 18px 36px rgba(239, 79, 63, 0.22);
       }
 
       .email-button:hover {
@@ -131,36 +133,44 @@
   <body>
     <main>
       <header>
-        <a class="back-link" href="index.html">Back to ContactSweep</a>
+        <a class="back-link" href="index.html">Back to PDF Toolbox</a>
         <h1>Support</h1>
         <p class="intro">
-          Need help with ContactSweep, have feedback, or want to ask a privacy question? Send a message and we will help as soon as possible.
+          Need help with PDF Toolbox, want to report a bug, or have a privacy question? Send a message and I will take a look.
         </p>
       </header>
 
       <div class="support-card">
         <h2>Contact Email</h2>
         <p>
-          For support, bug reports, feature requests, and privacy questions, email:
+          For support, bug reports, feature requests, feedback, and privacy questions, email:
         </p>
         <a class="email-button" href="mailto:contact@99haqh.com">contact@99haqh.com</a>
       </div>
 
       <section>
         <h2>What to Include</h2>
-        <p>To help us understand your request faster, please include:</p>
+        <p>To help understand your request faster, please include:</p>
         <ul>
           <li>A short description of the issue or question</li>
-          <li>Your device model and iOS version, if relevant</li>
-          <li>The ContactSweep app version, if available</li>
+          <li>Your device model and iOS or iPadOS version, if relevant</li>
+          <li>The PDF Toolbox app version, if available</li>
+          <li>The tool you were using, such as Merge PDFs, Compress PDF, Scan to PDF, or Add Signature</li>
           <li>Steps to reproduce the issue, if you are reporting a bug</li>
         </ul>
       </section>
 
       <section>
+        <h2>Camera Access</h2>
+        <p>
+          PDF Toolbox uses camera access only for the Scan to PDF feature. You can change or revoke camera permission at any time in your device settings.
+        </p>
+      </section>
+
+      <section>
         <h2>Privacy Questions</h2>
         <p>
-          ContactSweep only accesses your contacts to find duplicate contacts and does not store or send your contact list anywhere. For more details, please read the
+          PDF Toolbox processes its core PDF tools locally on your device and does not collect or share your documents. For more details, please read the
           <a href="Privacy-Policy.html">Privacy Policy</a>.
         </p>
       </section>
@@ -168,7 +178,7 @@
       <section>
         <h2>Response Time</h2>
         <p>
-          We aim to respond to support messages as soon as possible. Response times may vary depending on message volume and the detail needed to investigate your request.
+          I aim to respond to support messages as soon as possible. Response times may vary depending on message volume and the detail needed to investigate your request.
         </p>
       </section>
     </main>
